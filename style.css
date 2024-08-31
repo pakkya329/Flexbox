@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(159, 163, 171);
+
+}
+
+.container{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    /* background-color: aqua; */
+}
+
+a{
+    text-decoration: none;
+}
+
+.card_header{
+    margin-bottom: 2.8rem;
+}
+
+.card_header_title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    /* line-height: 2rem; */
+    font-weight: 700;
+    text-align: center;
+}
+
+.card_header_desc{
+    max-width: 570px;
+    text-align: center;
+    color: rgb(88, 85, 85);
+    margin: 0 auto;
+}
+
+.card_container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1,1fr);
+    /* grid-template-rows: repeat(2,1fr); */
+    
+}
+
+
+@media (min-width:822px){
+    .card_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:1200px){
+    .card_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width:1460px){
+    .card_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.card{
+    border: 1px solid rgba(54, 53, 53, 0.438);
+    border-radius: 5px;
+    /* width: 100%; */
+}
+
+.card_image_container{
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+
+}
+
+.card:hover .card_image{
+    transform: scale(1.1);
+    transition-duration: 2s;
+}
+
+.card_image{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card_title_container{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.card_title_header{
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: rgb(32, 32, 32);
+}
+
+.card_title_header:hover{
+    color: rgb(73, 73, 198);
+}
+
+.card_title_desc{
+    font-size: 0.9rem;
+    color: rgba(82, 79, 79, 0.718);
+}
+
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1.2rem 1rem;
+}
+.author_card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+}
+.author_info{
+    display: flex;
+    flex-direction: column ;
+    color: rgb(91, 88, 88);
+}
+.author_avatar_image{
+    width: 2.5rem ;
+    border: 1px solid rgb(105, 104, 104);
+    border-radius: 50%;
+}   
+
+.info_title{
+    color: rgb(102, 102, 223);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.author_tag{
+    font-size: 1rem;
+    color: grey;
+    padding: 0.4rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
